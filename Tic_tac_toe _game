@@ -1,0 +1,88 @@
+import sys
+p1=str(input("Player_1: "))
+p2=str(input("Player_2: "))
+  
+def boardf(board):
+    print("\n\n")
+    print( board[0],"\t|\t", board[1] ,"\t|\t", board[2])    
+    print("________________") 
+    print( board[3],"\t|\t", board[4] ,"\t|\t", board[5])    
+    print("________________") 
+    print( board[6],"\t|\t", board[7] ,"\t|\t", board[8])    
+
+def user(board):
+    flag=0
+    for i in range(8):
+     
+     if flag==0:
+      print("Player_1 turn:")
+      box=int(input("Enter the Box number:"))
+      board[box-1]="X"
+      boardf(board)
+      flag=1
+      winner(board)
+     elif flag==1:
+      print("Player_2 turn:")
+      box=int(input("Enter the Box number:"))
+      board[box-1]="O"
+      boardf(board)
+      flag=0
+      winner(board)
+def winner(board):
+    #for player one wining check
+    if board[0]=="X" and board[1]=="X" and board[2]=="X":
+        print(p1," won the game")
+        sys.exit()
+    elif board[3]=="X" and board[4]=="X" and board[5]=="X":
+        print(p1," won the game")
+        sys.exit()
+    elif board[6]=="X" and board[7]=="X" and board[8]=="X":
+        print(p1," won the game") 
+        sys.exit()
+    elif board[0]=="X" and board[3]=="X" and board[6]=="X":
+        print(p1," won the game")
+        sys.exit()
+    elif board[1]=="X" and board[4]=="X" and board[7]=="X":
+        print(p1," won the game")
+        sys.exit()
+    elif board[2]=="X" and board[5]=="X" and board[8]=="X":
+        print(p1," won the game")
+        sys.exit()  
+    elif board[0]=="X" and board[4]=="X" and board[8]=="X":
+        print(p1," won the game")
+        sys.exit()
+    elif board[2]=="X" and board[4]=="X" and board[6]=="X":
+        print(p1," won the game")
+        sys.exit()
+  #for 2ND player  wining check
+    if board[0]=="O" and board[1]=="O" and board[2]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[3]=="O" and board[4]=="O" and board[5]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[6]=="O" and board[7]=="O" and board[8]=="O":
+        print(p2," won the game") 
+        sys.exit()
+    elif board[0]=="O" and board[3]=="O" and board[6]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[1]=="O" and board[4]=="O" and board[7]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[2]=="O" and board[5]=="O" and board[8]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[0]=="O" and board[4]=="O" and board[8]=="O":
+        print(p2," won the game")
+        sys.exit()
+    elif board[2]=="O" and board[4]=="O" and board[6]=="O":
+        print(p2," won the game")
+        sys.exit()
+
+board=["1","2","3","4","5","6","7","8","9"]
+
+print("For Player_1 is  X")
+print("For Player_2 is  O")
+boardf(board)
+user(board)
