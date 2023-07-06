@@ -1,0 +1,45 @@
+print("Welcom To Quiz\n")
+score=0
+print("\nQ1: Famous programming language is:\n")
+print("-Java\n-HTml\n-Python\n-Javascript")
+ans=input("Enter Your Answer: ")
+if ans=="Python" or ans=="python":
+    print("Correct!")
+    score+=1
+else:
+    print("incorrect!")
+print("\nQ2: Backend programming language is:\n")
+print("-Css\n-HTml\n-Python\n-Javascript")
+ans=input("Enter Your Answer: ")
+if ans=="Python" or ans=="python":
+    print("Correct!")
+    score+=1
+else:
+    print("incorrect!")
+print("\nQ3: Which is not a programming language :\n")
+print("-Java\n-flow\n-Python\n-Javascript")
+ans=input("Enter Your Answer: ")
+if ans=="flow" or ans=="Flow":
+    print("Correct!")
+    score+=1
+else:
+    print("incorrect!")
+print("\nQ4: Famous programming language framework is:\n")
+print("-Java\n-HTml\n-Python\n-Django")
+ans=input("Enter Your Answer: ")
+if ans=="Django" or ans=="django":
+    print("Correct!")
+    score+=1
+else:
+    print("incorrect!")
+print("\nQ5: Framework of Python is:\n")
+print("-Java\n-HTml\n-Python\n-Django")
+ans=input("Enter Your Answer: ")
+if ans=="Django" or ans=="django":
+    print("Correct!")
+    score+=1
+else:
+    print("incorrect!")
+print("--------------------------")
+print("Result: ",score ,"out of 5")
+  
