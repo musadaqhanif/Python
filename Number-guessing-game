@@ -1,0 +1,19 @@
+import random
+import math
+f=int(input("Enter Lower bound: "))
+l=int(input("Enter Upper bound: "))
+print("You've only  2  chances to guess the integer!")
+x=random.randint(f,l)
+user=int(input("Enter Number: "))
+if user==x:
+    print("Congrajulations! You have guessed the Number")
+    print("Number is ",x)
+elif user !=x:
+    print("Wrong! You have one More Chance")
+    user=int(input("Enter Number: "))
+    if user==x:
+     print("Congrajulations! You have guessed the Number")
+     print("Number is ",x)
+    elif user !=x:
+     print("Wrong! You failed to guess number")
+     print("Better Luck for Next Time")
